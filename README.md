@@ -77,4 +77,29 @@ DNS is the naming system that translates user-friendly domain names into numeric
   </ul>
 </p>
 
+<br />
 
+<h3>CNAME Record</h3>
+
+<p>
+  <ul>
+    <li>"CNAME" is an abbreviated form of "Canonical Name": Pointing to a name to another name instead of an IP address unlike an A-Record</li>
+    <li>In the Domain Controller VM, open the <b>DNS Manager</b> in the Server Manager Board and go to the domain created within the <b>Forward Lookup Zones</b> tab (mydomain.com)</li>
+    <li>Then, right click on the page and create a <b>New Alias (CNAME)</b>. Name the alias <b>Search</b> and the fully qualified domain name (FQDN) to any website such as <b>www.google.com</b>. Once the information is entered, hit OK and refresh the DNS server so that the new record can be updated</li>
+    <br>
+    <img width="700" alt="CNAME record" src="https://github.com/landonbmartin/DNS/assets/148168629/1812f959-a8ac-484e-a60f-7421f7fe4219">
+    </br>
+    <li>In the Client VM, ping the record "search" by the command <b>ping search</b> and see the results of the CNAME Record. It will ping to the website listed in the FQDN (www.google.com)</li>
+    <br>
+    <img width="700" alt="ping search" src="https://github.com/landonbmartin/DNS/assets/148168629/495a6131-020c-4438-830f-e786c478969e">
+    </br>
+    <li>Performing the nslookup command with "search" (<b>nslookup search</b>) will result in a name server lookup for Google</li>
+    <br>
+    <img width="700" alt="nslookup search" src="https://github.com/landonbmartin/DNS/assets/148168629/61966fd3-7430-4730-8b74-7e76c6990960">
+    </br>
+  </ul>
+</p>
+
+<br />
+
+<h3 align = "right">Next Tutorial - <a href="https://github.com/landonbmartin/network-fileshare">Network Fileshare and Permissions in Active Directory</a></h3>
